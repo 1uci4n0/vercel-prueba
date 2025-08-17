@@ -17,7 +17,7 @@ app.engine(
 	}),
 );
 app.set("view engine", ".hbs"); // para no tener que escribir la extencion al renderizar
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "..", "views"));
 
 // express.urlencoded(): Es una función integrada en Express que devuelve el middleware.
 // Su nombre (url-encoded) se refiere al formato en el que se codifican los datos de un
@@ -80,9 +80,9 @@ app.post("/enviar_mensaje", (req, res) => {
 	res.redirect("/contacto?exito=true");
 });
 
-/*app.listen(port, () => {
+app.listen(port, () => {
 	console.log(`Servidor escuchando en http://localhost:${port}`);
-});*/
+});
 // });
 
-module.exports = app;
+// module.exports = app;
