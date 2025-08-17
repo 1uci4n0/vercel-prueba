@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Café Ejemplo - {{titulo}}</title>
+    <link rel="stylesheet" href="/css/mobile-first.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Mi Café</h1>
+    </header>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/menu">Menú</a>
+        <a href="/contacto">Contacto</a>
+    </nav>
+    <div class="container">
+        {{! Aquí se renderizará el contenido de cada vista }}
+        {{{body}}}
+    </div>
+    <footer>
+        <p>Copyright &copy; 2023 Mi Café</p>
+    </footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+/* Estilos base (Mobile First) */
+body {
+    font-size: 16px;
+}
+
+nav a {
+    display: block; /* Cada enlace en una nueva línea */
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.container {
+    width: 90%;
+    margin: 10px auto;
+}
+
+/* Media query para tablets (p. ej., ancho mínimo de 768px) */
+@media (min-width: 768px) {
+    nav a {
+        display: inline-block; /* Enlaces en línea */
+        border-bottom: none;
+        margin: 0 15px;
+    }
+
+    .container {
+        width: 80%;
+        /*background-color: gold;*/
+    }
+}
+
+/* Media query para escritorios (p. ej., ancho mínimo de 1024px) */
+@media (min-width: 1024px) {
+    .container {
+        width: 70%;
+        /*background-color: red;*/
+    }
+}

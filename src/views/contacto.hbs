@@ -1,0 +1,17 @@
+<h2>{{titulo}}</h2>
+
+{{#if mensajeExito}}
+    <div class="alert-success">{{mensajeExito}}</div>
+{{/if}}
+
+<form id="contact-form" action="/enviar_mensaje" method="post" novalidate>
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br>
+    <span class="error-message" id="nombre-error"></span><br>
+
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" required></textarea><br>
+    <span class="error-message" id="mensaje-error"></span><br><br>
+
+    <button type="submit" id="submit-btn">Enviar</button>
+</form>
