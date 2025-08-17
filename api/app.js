@@ -80,9 +80,9 @@ app.post("/enviar_mensaje", (req, res) => {
 	res.redirect("/contacto?exito=true");
 });
 
-app.listen(port, () => {
+/*app.listen(port, () => {
 	console.log(`Servidor escuchando en http://localhost:${port}`);
-});
+});*/
 // });
 
-// module.exports = app;
+module.exports = app;
