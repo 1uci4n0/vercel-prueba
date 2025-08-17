@@ -1,7 +1,10 @@
 // app.js
+require("dotenv").config();
+// console.log(process.env.DB_HOST);
 
 const express = require("express");
 const exphbs = require("express-handlebars");
+const pool = require("../config/db");
 const path = require("path");
 const app = express();
 const port = 3000;
@@ -80,9 +83,20 @@ app.post("/enviar_mensaje", (req, res) => {
 	res.redirect("/contacto?exito=true");
 });
 
+app.get("/books", async (req, res) => {
+	try {
+		const [rows] = await pool.query("SELECT * FROM books");
+		// return rows;
+		res.json(rows);
+	} catch (err) {
+		console.error("Error al obtener todos los libros:", err);
+		throw new Error("No se pudieron obtener los libros"); // Lanza el error para que sea manejado por la ruta
+	}
+});
+
 /*app.listen(port, () => {
 	console.log(`Servidor escuchando en http://localhost:${port}`);
 });*/
 // });
 
-module.exports = app;
+module.exports = app; //vercel

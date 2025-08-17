@@ -16,9 +16,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3",
-    "handlebars": "^4.7.8"
+    "handlebars": "^4.7.8",
+    "mysql2": "^3.14.3"
   },
   "devDependencies": {
     "cpx": "^1.5.0",
